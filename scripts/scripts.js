@@ -1,25 +1,23 @@
+var gridSize = 16
+
 $(document).ready(function(){
-	createGrid();
-	$("#reset").click(function(){
-		$(".block").css("background-color","#fff");
-		reset();
-	})
-	$(".block").hover( function() {
+	createGrid(gridSize);
+	$(document).on("mouseenter",".block", function(){
 		$(this).css("background-color","black");
 	});
 });
 
-function createGrid(){
-	var gridSize = 16;
-	for (var i=0;i<gridSize;i++) 
+function createGrid(size){
+	for (var i=0;i<size;i++) 
 	{
-	for (var j=0;j<gridSize;j++) {
+	for (var j=0;j<size;j++) {
 		$(".grid").append("<div class='block'></div>");
 	}
 	}
 }
 
 function reset() {
-	$(".grid .block").remove();
-	createGrid();
+	$(".block").remove();
+	newGridSize = prompt("How big should your grid be?");
+	createGrid(newGridSize);
 }
