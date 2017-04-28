@@ -5,6 +5,12 @@ $(document).ready(function(){
 	$(document).on("mouseenter",".block", function(){
 		$(this).css("background-color","black");
 	});
+	$(".reset").click(function(){
+		reset();
+	});
+	$(".test").click(function(){
+		$(".test").css("background-color","black");
+	});
 });
 
 function createGrid(size){
@@ -17,7 +23,14 @@ function createGrid(size){
 }
 
 function reset() {
-	$(".block").remove();
+	$(".grid .block").remove();
 	newGridSize = prompt("How big should your grid be?");
+	if (newGridSize === 32) {
+		$(".block").css("background-color","red");
+	};
 	createGrid(newGridSize);
+	if (newGridSize === "32") {
+		$(".block").css("width","14px");
+		$(".block").css("height","14px");
+	};
 }

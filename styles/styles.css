@@ -1,12 +1,5 @@
-
-.wrapper {
-	margin: 50px 400px;
-
-}
-
-#reset {
-	width: 100px;
-	margin-left: 150px;
+html {
+	background-color: #033156;
 }
 
 h1 {
@@ -15,23 +8,33 @@ h1 {
     text-shadow: 1px -1px black;
 }
 
-#button {
-	width: 50px;
-	margin: 0 auto;
+.button #reset{
+	display: block;
+	margin: 10px auto;
+	text-decoration: none;
 }
 
 .grid {
-	margin-top: 20px;
-	padding: 0px;
+	margin: 20px auto;
+	width: 480px;
+	height: 480px;
+	border: solid 1px;
+	background-color: white;
 }
+
 .grid .block {
 	display: inline-block;
 	vertical-align: top;
-	width: 28px;
-	height: 28px;
-	border: solid 1px;
+	width: 30px;
+	height: 30px;
 }
 
 .grid .color {
 	background-color: black;
+}
+
+.test {
+	width: 100px;
+	height: 100px;
+	background-color: red;
 }
