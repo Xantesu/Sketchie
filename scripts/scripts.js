@@ -1,15 +1,18 @@
 var gridSize = 16
+var gridColor = "black";
 
 $(document).ready(function(){
 	createGrid(gridSize);
 	$(document).on("mouseenter",".block", function(){
-		$(this).css("background-color","black");
+		$(this).css("background-color",gridColor);
 	});
 	$(".reset").click(function(){
 		reset();
 	});
-	$(".test").click(function(){
-		$(".test").css("background-color","black");
+	$(".color").click(function(){
+		gridColor = $(this).css("background-color");
+		$(".color").css("opacity","1");
+		$(this).css("opacity","0.5");
 	});
 });
 
